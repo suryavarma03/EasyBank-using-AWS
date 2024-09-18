@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>EasyBank - Login</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="../static/assets/img/favicon.png" rel="icon">
+  <link href="../static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../static/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Flattern
+  * Template URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">EasyBank</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="/" class="active">Home<br></a></li>
+            <!-- <li><a href="about.html">About</a></li> -->
+            <li><a href="/services">Services</a></li>
+            <!-- <li><a href="pricing.html">Pricing</a></li> -->
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Login</a></li>
+            <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
+            <!-- <li><a href="blog.html">Blog</a></li> -->
+            <!-- <li class="dropdown"><a href="#"><span>Analytics</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Financial Performance</a></li>
+                    <li><a href="#">Risk Assessment</a></li>
+                    <li><a href="#">Regulatory Compliance</a></li>
+                    <li><a href="#">Customer Insights</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li> -->
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="../static/assets/img/hero-carousel/hero-carousel-1.jpg" alt="">
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="../static/assets/img/hero-carousel/hero-carousel-2.jpg" alt="">
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="../static/assets/img/hero-carousel/hero-carousel-3.jpg" alt="">
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron -left" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="login section light-background">
+
+      <div class="container">
+        <h2>Login</h2>
+        <p>Enter your credentials to access your account.</p>
+
+        <form action="{{url_for('login')}}" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" class="form-control" id="email" required>
+            </div>
+            <div class="col-md-6 form-group">
+              <label for="password">Password</label>
+              <input type="password" name="password" class="form-control" id="password" required>
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit"> Login</button>
+          </div>
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 footer-contact">
+          <h3>Contact Us</h3>
+          <p>
+            A108 Adam Street <br>
+            New York, NY 535022<br>
+            United States <br><br>
+            <strong>Phone:</strong> +1 5589 55488 55<br>
+            <strong>Email:</strong> <a href="mailto:info@example.com">info@example.com</a><br>
+          </p>
+        </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>EasyBank</span></strong>. All Rights Reserved
+      </div>
+    </div>
+
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+</body>
+
+</html>
+

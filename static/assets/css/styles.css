@@ -1,0 +1,197 @@
+/* Replicating styles from main.css */
+
+/* Navbar Styling */
+header {
+    background: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 2px;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    color: #333;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+header nav ul li a.active {
+    color: #ff5733;  /* Add the active page color */
+}
+
+header nav ul li a:hover {
+    color: #ff5733;
+}
+
+/* Hero Section Styling */
+.hero {
+    background-image: url('hero-background.jpg'); /* Add your background image */
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Ensures text overlap on top of image */
+.hero-content h1, .hero-content p {
+    z-index: 2;
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+}
+
+.header h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+nav a:hover {
+    background-color: #575757;
+    padding: 10px;
+}
+
+/* Full-width image styling */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Cards styling */
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    max-width: 100%;  /* Ensures the image takes full width of the card */
+    height: auto;
+    border-radius: 5px;
+}
+
+.card h2 {
+    margin: 20px 0 10px 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.card button {
+    background-color: #77aaff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #5599ff;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+}

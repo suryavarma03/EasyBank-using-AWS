@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Statements</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Custom styling for statements page */
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .no-transactions {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Account Statements</h1>
+
+        {% if transactions %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Transaction Type</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction[0] }}</td> <!-- Transaction Type -->
+                    <td>{{ transaction[1] }}</td> <!-- Amount -->
+                    <td>{{ transaction[2] }}</td> <!-- Date -->
+                    <td>{{ transaction[3] }}</td> <!-- Description -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <div class="no-transactions">
+            <p>No transactions found.</p>
+        </div>
+        {% endif %}
+
+        <a href="{{ url_for('dashboard') }}" class="btn-back">Back to Dashboard</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Bank. All rights reserved.</p>
+    </footer>
+</body>
+</html>
