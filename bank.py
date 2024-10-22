@@ -8,10 +8,10 @@ app.secret_key = "your_secret_key"  # Needed for flash msgs
 
 # Database config
 db_config = {
-    'host': 'bank.crqmssgockvo.ap-south-1.rds.amazonaws.com',
+    'host': 'database-2.cfqkya06y4b1.us-east-1.rds.amazonaws.com',
     'user': 'admin',
-    'password': 'Surya123456',
-    'database': 'bank'
+    'password': 'aPriqFgwFPZAz3DdL4Aj',
+    'database': 'testing'
 }
 cnxpool = mysql.connector.pooling.MySQLConnectionPool(pool_name="mypool",
                                                        pool_size=5,
