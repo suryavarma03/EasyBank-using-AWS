@@ -14,9 +14,9 @@ db_config = {
     'database': 'bank'
 }
 
-cnxpool = mysql.connector.pooling.MySQLConnectionPool(pool_name="mypool",
-                                                      pool_size=5,
-                                                      **db_config)
+# cnxpool = mysql.connector.pooling.MySQLConnectionPool(pool_name="mypool",
+#                                                       pool_size=5,
+#                                                       **db_config)
 
 # Function to establish a database connection
 def get_db_connection():
