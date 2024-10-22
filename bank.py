@@ -13,8 +13,7 @@ db_config = {
     'password': 'Surya123456',
     'database': 'bank'
 }
-
- cnxpool = mysql.connector.pooling.MySQLConnectionPool(pool_name="mypool",
+cnxpool = mysql.connector.pooling.MySQLConnectionPool(pool_name="mypool",
                                                        pool_size=5,
                                                        **db_config)
 
